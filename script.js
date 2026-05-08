@@ -12,117 +12,140 @@ hamburger.addEventListener("click", () => {
 
 });
 
-// ==========================
-// COMMENTAIRES
-// ==========================
+// COPYRIGHT AUTO
 
-function addComment(){
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
-  const username =
-  document.getElementById("username").value;
+// ANIMATION SCROLL
 
-  const commentInput =
-  document.getElementById("commentInput").value;
+const hiddenElements =
+document.querySelectorAll(".hidden");
 
-  if(username === "" || commentInput === ""){
+const observer =
+new IntersectionObserver((entries) => {
 
-    alert("Veuillez remplir les champs");
+  entries.forEach((entry) => {
 
-    return;
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+  });
+
+});
+
+hiddenElements.forEach((el) =>
+observer.observe(el));
+
+// BOUTON RETOUR HAUT
+
+const scrollBtn =
+document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 300){
+
+    scrollBtn.style.display = "block";
+
+  }else{
+
+    scrollBtn.style.display = "none";
+
   }
 
-  const commentsList =
-  document.getElementById("commentsList");
+});
 
-  // CREATION DU COMMENTAIRE
+scrollBtn.addEventListener("click", () => {
 
-  const comment =
-  document.createElement("div");
+  window.scrollTo({
 
-  comment.classList.add("comment");
+    top:0,
+    behavior:"smooth"
 
-  comment.innerHTML = `
+  });
 
-    <h4>${username}</h4>
+});
 
-    <p>${commentInput}</p>
+// =========================
+// MENU MOBILE
+// =========================
 
-  `;
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-  commentsList.prepend(comment);
+hamburger.addEventListener("click", () => {
 
-  // VIDER LES CHAMPS
+  navLinks.classList.toggle("active");
 
-  document.getElementById("username").value = "";
+});
 
-  document.getElementById("commentInput").value = "";
-}
+// =========================
+// ANNEE AUTOMATIQUE
+// =========================
 
-// ==========================
-// SYSTEME DE LIKE
-// ==========================
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+// =========================
+// BOUTON J'AIME
+// =========================
 
 let likes = 0;
 
-function likePortfolio(){
+function likePortfolio() {
 
   likes++;
 
   document.getElementById("likeCount")
   .textContent = likes;
+
 }
 
-// COPYRIGHT
+// =========================
+// COMMENTAIRES
+// =========================
 
-const year =
-document.getElementById("year");
+function addComment() {
 
-year.textContent =
-new Date().getFullYear();
+  const username =
+  document.getElementById("username").value;
 
-// SLIDER ELECTION
+  const comment =
+  document.getElementById("commentInput").value;
 
-const images = [
+  if(username === "" || comment === "") {
 
-  "Election.png",
+    alert("Veuillez remplir tous les champs.");
 
-  "planDacces.png",
+    return;
 
-  "parrainage.png",
-
-  "tableuabord.png"
-
-];
-
-let current = 0;
-
-const slide =
-document.getElementById("slide");
-
-// IMAGE SUIVANTE
-
-function nextSlide(){
-
-  current++;
-
-  if(current >= images.length){
-
-    current = 0;
   }
 
-  slide.src = images[current];
-}
+  const commentsList =
+  document.getElementById("commentsList");
 
-// IMAGE PRECEDENTE
+  const commentCard =
+  document.createElement("div");
 
-function prevSlide(){
+  commentCard.classList.add("comment-card");
 
-  current--;
+  commentCard.innerHTML = `
 
-  if(current < 0){
+    <h4>${username}</h4>
 
-    current = images.length - 1;
-  }
+    <p>${comment}</p>
 
-  slide.src = images[current];
+  `;
+
+  commentsList.prepend(commentCard);
+
+  // vider les champs
+
+  document.getElementById("username").value = "";
+  document.getElementById("commentInput").value = "";
+
 }

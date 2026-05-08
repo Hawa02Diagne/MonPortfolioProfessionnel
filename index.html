@@ -54,7 +54,9 @@
 
         <li><a href="#about">À propos</a></li>
 
-        <li><a href="#services">Compétences</a></li>
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#technologies">Technologies</a></li>
 
         <li><a href="#projects">Projets</a></li>
 
@@ -76,8 +78,6 @@
 
   <section class="hero container"
   id="home">
-
-    <!-- TEXTE -->
 
     <div class="hero-text">
 
@@ -120,12 +120,12 @@
         </a>
 
         <a href="Hawa-Diagne-CV.pdf"
-download
-class="btn cv-btn">
+        download
+        class="btn cv-btn">
 
-  Télécharger mon CV
+          Télécharger mon CV
 
-</a>
+        </a>
 
       </div>
 
@@ -182,7 +182,7 @@ class="btn cv-btn">
 
   <!-- A PROPOS -->
 
-  <section class="about container"
+  <section class="about container hidden"
   id="about">
 
     <div class="about-text">
@@ -225,7 +225,7 @@ class="btn cv-btn">
 
   <!-- SERVICES -->
 
-  <section class="services"
+  <section class="services hidden"
   id="services">
 
     <div class="container">
@@ -282,9 +282,53 @@ class="btn cv-btn">
 
   </section>
 
+  <!-- TECHNOLOGIES -->
+
+  <section class="technologies container hidden"
+  id="technologies">
+
+    <div class="section-title">
+
+      <h2>
+        Technologies
+      </h2>
+
+    </div>
+
+    <div class="tech-grid">
+
+      <div class="tech-item">
+        <i class="fa-brands fa-html5"></i>
+        <p>HTML5</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-brands fa-css3-alt"></i>
+        <p>CSS3</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-brands fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-brands fa-react"></i>
+        <p>React.js</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-brands fa-github"></i>
+        <p>GitHub</p>
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- PROJETS -->
 
-  <section class="projects container"
+  <section class="projects container hidden"
   id="projects">
 
     <div class="section-title">
@@ -297,71 +341,33 @@ class="btn cv-btn">
 
     <div class="projects-grid">
 
-      <!-- PROJET SSO -->
-
-<article class="project-card">
-
-  <!-- IMAGES PROJET -->
-
-  <div class="project-images">
-
-    <img
-    src="Bienvenue.png"
-    alt="Plateforme SSO">
-
-    <img
-    src="Cosmos.png"
-    alt="Authentification">
-
-  </div>
-
-  <!-- CONTENU -->
-
-  <div class="project-content">
-
-    <h3>
-      Plateforme Multi / SSO
-    </h3>
-
-    <p>
-
-      Développement d’une plateforme web
-      avec authentification unique (SSO)
-      et gestion sécurisée des accès utilisateurs.
-
-    </p>
-
-    <div class="tech-tags">
-
-      <span>HTML</span>
-
-      <span>CSS</span>
-
-      <span>JavaScript</span>
-
-      <span>Laravel</span>
-
-      <span>Keycloak</span>
-
-    </div>
-
-  </div>
-
-</article>
-
-      <!-- PROJET BFEM -->
+      <!-- PROJET 1 -->
 
       <article class="project-card">
 
-        <div class="project-images">
+        <img src="Bienvenue.png">
 
-          <img src="LogBFEEM.png">
+        <div class="project-content">
 
-          <img src="gestionnotes.png">
+          <h3>
+            Plateforme Multi / SSO
+          </h3>
 
-          <img src="image1.png">
+          <p>
+
+            Plateforme web avec authentification unique.
+
+          </p>
 
         </div>
+
+      </article>
+
+      <!-- PROJET 2 -->
+
+      <article class="project-card">
+
+        <img src="LogBFEEM.png">
 
         <div class="project-content">
 
@@ -371,50 +377,19 @@ class="btn cv-btn">
 
           <p>
 
-            Application desktop permettant
-            la gestion et le suivi des candidats.
+            Gestion et suivi des candidats.
 
           </p>
-
-          <div class="tech-tags">
-
-            <span>Python</span>
-
-            <span>PyQt5</span>
-
-            <span>SQLite</span>
-
-          </div>
 
         </div>
 
       </article>
 
-      <!-- PROJET ELECTION -->
+      <!-- PROJET 3 -->
 
       <article class="project-card">
 
-        <div class="slider">
-
-          <img
-          id="slide"
-          src="Election.png">
-
-          <button class="prev"
-          onclick="prevSlide()">
-
-            ❮
-
-          </button>
-
-          <button class="next"
-          onclick="nextSlide()">
-
-            ❯
-
-          </button>
-
-        </div>
+        <img src="Election.png">
 
         <div class="project-content">
 
@@ -424,22 +399,9 @@ class="btn cv-btn">
 
           <p>
 
-            Interface web interactive permettant
-            la présentation des candidats,
-            le suivi des votes et l’affichage
-            des résultats.
+            Interface web interactive.
 
           </p>
-
-          <div class="tech-tags">
-
-            <span>HTML</span>
-
-            <span>CSS</span>
-
-            <span>JavaScript</span>
-
-          </div>
 
         </div>
 
@@ -449,76 +411,9 @@ class="btn cv-btn">
 
   </section>
 
-  <!-- COMMENTAIRES -->
-
-<div class="comments-section">
-
-  <h3>
-    Avis & Commentaires
-  </h3>
-
-  <!-- FORMULAIRE -->
-
-  <form class="comment-form">
-
-    <input
-    type="text"
-    id="username"
-    placeholder="Votre nom"
-    required>
-
-    <textarea
-    id="commentInput"
-    rows="4"
-    placeholder="Écrivez un commentaire..."
-    required></textarea>
-
-    <button
-    type="button"
-    onclick="addComment()"
-    class="btn primary-btn">
-
-      Publier
-
-    </button>
-
-  </form>
-
-  <!-- BOUTON J'AIME -->
-
-  <div class="like-section">
-
-    <button
-    class="like-btn"
-    onclick="likePortfolio()">
-
-      ❤️ J’aime
-
-    </button>
-
-    <p>
-
-      <span id="likeCount">
-        0
-      </span>
-
-      personnes aiment ce portfolio
-
-    </p>
-
-  </div>
-
-  <!-- LISTE COMMENTAIRES -->
-
-  <div id="commentsList">
-
-  </div>
-
-</div>
-
   <!-- CONTACT -->
 
-  <section class="contact"
+  <section class="contact hidden"
   id="contact">
 
     <div class="container">
@@ -567,6 +462,83 @@ class="btn cv-btn">
 
   </section>
 
+  <!-- COMMENTAIRES & J'AIME -->
+
+<section class="comments-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Avis & Commentaires
+      </h2>
+
+      <p>
+        Les visiteurs peuvent laisser un avis sur mon portfolio.
+      </p>
+
+    </div>
+
+    <!-- BOUTON J'AIME -->
+
+    <div class="like-box">
+
+      <button
+      class="like-btn"
+      onclick="likePortfolio()">
+
+        ❤️ J’aime
+
+      </button>
+
+      <p>
+
+        <span id="likeCount">
+          0
+        </span>
+
+        personnes aiment ce portfolio
+
+      </p>
+
+    </div>
+
+    <!-- FORMULAIRE COMMENTAIRE -->
+
+    <div class="comment-form">
+
+      <input
+      type="text"
+      id="username"
+      placeholder="Votre nom">
+
+      <textarea
+      id="commentInput"
+      rows="5"
+      placeholder="Écrivez votre commentaire..."></textarea>
+
+      <button
+      onclick="addComment()"
+      class="btn primary-btn">
+
+        Publier
+
+      </button>
+
+    </div>
+
+    <!-- LISTE COMMENTAIRES -->
+
+    <div id="commentsList"
+    class="comments-list">
+
+    </div>
+
+  </div>
+
+</section>
+
   <!-- FOOTER -->
 
   <footer class="footer">
@@ -587,6 +559,16 @@ class="btn cv-btn">
     </div>
 
   </footer>
+
+  <!-- BOUTON RETOUR HAUT -->
+
+  <button id="scrollTopBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+  <!-- JS -->
 
   <script src="script.js"></script>
 
