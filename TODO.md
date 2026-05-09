@@ -1,7 +1,8 @@
-# TODO - Navigation “card → photo suivante”
+# TODO
+- [x] Analyser le layout de la section Accueil (hero) : photo + réseaux dans `.hero-right`.
+- [x] Modifier `style.css` pour rapprocher la photo et les réseaux du centre : changer `justify-content` et ajuster `gap`/décalage.
 
-- [ ] Ajouter dans `script.js` une gestion d’événement sur `.project-card` pour avancer la galerie à la photo suivante au clic
-- [ ] Gérer le cas “dernière photo” (boucler à la première)
-- [ ] Éventuellement empêcher le clic sur des liens/boutons (si nécessaire)
-- [x] Tester dans le navigateur
+- [x] Sécuriser la section commentaires contre le XSS (remplacement de innerHTML).
+- [ ] Tester le rendu (desktop + responsive) et corriger si besoin.
+
 

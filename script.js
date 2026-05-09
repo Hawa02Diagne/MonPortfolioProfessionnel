@@ -114,14 +114,20 @@ function addComment(){
   const commentBox = document.createElement("div");
   commentBox.classList.add("comment");
 
-  commentBox.innerHTML = `
-    <h4>${username}</h4>
-    <p>${commentText}</p>
-  `;
+  // Sécurité: éviter XSS en ne réinjectant jamais l'entrée utilisateur en HTML.
+  const title = document.createElement("h4");
+  title.textContent = username;
+
+  const body = document.createElement("p");
+  body.textContent = commentText;
+
+  commentBox.appendChild(title);
+  commentBox.appendChild(body);
 
   document.getElementById("commentsList").prepend(commentBox);
 
   document.getElementById("username").value = "";
   document.getElementById("commentInput").value = "";
 }
+
 
