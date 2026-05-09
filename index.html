@@ -462,6 +462,83 @@
 
   </section>
 
+  <!-- COMMENTAIRES -->
+
+<section class="comments-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Avis & Commentaires
+      </h2>
+
+      <p>
+        Laissez un avis sur mon portfolio.
+      </p>
+
+    </div>
+
+    <!-- BOUTON J'AIME -->
+
+    <div class="like-box">
+
+      <button
+      class="like-btn"
+      onclick="likePortfolio()">
+
+        ❤️ J’aime
+
+      </button>
+
+      <p>
+
+        <span id="likeCount">
+          0
+        </span>
+
+        personnes aiment ce portfolio
+
+      </p>
+
+    </div>
+
+    <!-- FORMULAIRE COMMENTAIRE -->
+
+    <div class="comment-form">
+
+      <input
+      type="text"
+      id="username"
+      placeholder="Votre nom">
+
+      <textarea
+      id="commentInput"
+      rows="5"
+      placeholder="Écrivez votre commentaire..."></textarea>
+
+      <button
+      onclick="addComment()"
+      class="btn primary-btn">
+
+        Publier
+
+      </button>
+
+    </div>
+
+    <!-- LISTE COMMENTAIRES -->
+
+    <div id="commentsList"
+    class="comments-list">
+
+    </div>
+
+  </div>
+
+</section>
+
   <!-- FOOTER -->
 
   <footer class="footer">

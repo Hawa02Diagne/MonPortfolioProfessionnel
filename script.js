@@ -69,3 +69,61 @@ scrollBtn.addEventListener("click", () => {
   });
 
 });
+
+// ==========================
+// BOUTON J'AIME
+// ==========================
+
+let likes = 0;
+
+function likePortfolio(){
+
+  likes++;
+
+  document.getElementById("likeCount")
+  .innerText = likes;
+
+}
+
+// ==========================
+// COMMENTAIRES
+// ==========================
+
+function addComment(){
+
+  const username =
+  document.getElementById("username").value;
+
+  const commentInput =
+  document.getElementById("commentInput").value;
+
+  if(username === "" || commentInput === ""){
+
+    alert("Veuillez remplir tous les champs");
+
+    return;
+  }
+
+  const commentBox =
+  document.createElement("div");
+
+  commentBox.classList.add("comment");
+
+  commentBox.innerHTML = `
+
+    <h4>${username}</h4>
+
+    <p>${commentInput}</p>
+
+  `;
+
+  document.getElementById("commentsList")
+  .appendChild(commentBox);
+
+  // Réinitialiser
+
+  document.getElementById("username").value = "";
+
+  document.getElementById("commentInput").value = "";
+
+}
