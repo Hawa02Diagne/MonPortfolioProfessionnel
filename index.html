@@ -26,8 +26,14 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <link rel="icon"
+href="favicon.png">
 </head>
 
 <body>
@@ -65,122 +71,136 @@
     </nav>
 
   </header>
+  <main>
+  </main>
 
-  <!-- HERO -->
+<!-- HERO -->
 
-  <section class="hero container" id="home">
+<section class="hero container"
+  id="home">
 
-    <div class="hero-text">
+  <!-- TEXTE -->
 
-      <span class="badge">
-        Disponible pour de nouveaux projets
-      </span>
+  <div class="hero-text">
 
-      <h1>Hawa Diagne</h1>
+    <span class="badge">
+      Disponible pour de nouveaux projets
+    </span>
 
-      <h2>
-        Développeuse Web Frontend
-      </h2>
+    <h1>
+      Hawa Diagne
+    </h1>
 
-      <p>
-        Je développe des interfaces web modernes,
-        responsives et interactives avec HTML,
-        CSS, JavaScript et React.js afin d’aider
-        les entreprises à améliorer leur présence digitale.
-      </p>
+    <h2>
+      Développeuse Web Frontend
+    </h2>
 
-      <div class="hero-buttons">
+    <p>
 
-        <a href="#projects"
-          class="btn primary-btn">
-          Voir mes projets
-        </a>
+      Je développe des interfaces web modernes,
+      responsives et interactives avec HTML,
+      CSS, JavaScript et React.js afin d’aider
+      les entreprises et porteurs de projets
+      à améliorer leur présence digitale.
 
-        <a href="#contact"
-          class="btn secondary-btn">
-          Me contacter
-        </a>
+    </p>
 
-        <a href="Hawa-Diagne-CV.pdf"
-          download
-          class="btn cv-btn">
+    <!-- BOUTONS -->
 
-          Télécharger mon CV
+    <div class="hero-buttons">
 
-        </a>
+      <a href="#projects"
+        class="btn primary-btn">
 
-      </div>
+        Voir mes projets
 
-    </div>
+      </a>
 
-    <!-- IMAGE -->
+      <a href="#contact"
+        class="btn secondary-btn">
 
-    <div class="hero-right">
+        Me contacter
 
-      <div class="hero-image">
+      </a>
 
-        <img
-          src="Design sans titre (3).png"
-          alt="Hawa Diagne">
+      <a href="Hawa-Diagne-CV.pdf"
+        download
+        class="btn cv-btn">
 
-      </div>
+        Télécharger mon CV
 
-      <!-- SOCIALS -->
-
-      <div class="hero-socials">
-
-        <a href="https://linkedin.com/in/hawa-diagne-25739a37"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          <i class="fa-brands fa-linkedin"></i>
-
-        </a>
-
-        <a href="https://github.com/Hawa02Diagne"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          <i class="fa-brands fa-github"></i>
-
-        </a>
-
-        <a href="https://wa.me/221000000000"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          <i class="fa-brands fa-whatsapp"></i>
-
-        </a>
-
-        <a href="mailto:diagnehawa603@gmail.com">
-
-          <i class="fa-solid fa-envelope"></i>
-
-        </a>
-
-      </div>
+      </a>
 
     </div>
 
-  </section>
+  </div>
+
+  <!-- IMAGE + RESEAUX -->
+
+  <div class="hero-right">
+
+    <!-- PHOTO -->
+
+    <div class="hero-image">
+
+      <img
+        src="Design sans titre (3).png"
+        alt="Photo de Hawa Diagne">
+
+    </div>
+
+    <!-- RESEAUX SOCIAUX -->
+
+    <div class="hero-socials">
+
+      <a href="https://linkedin.com/in/hawa-diagne-25739a37"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <i class="fa-brands fa-linkedin"></i>
+
+      </a>
+
+      <a href="https://github.com/Hawa02Diagne"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <i class="fa-brands fa-github"></i>
+
+      </a>
+
+      <a href="https://wa.me/221000000000"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+      </a>
+
+      <a href="mailto:diagnehawa603@gmail.com">
+
+        <i class="fa-solid fa-envelope"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- A PROPOS -->
 
   <section class="about container hidden" id="about">
-
+<div class="card"
+data-aos="fade-up">
     <div class="section-title">
       <h2>À propos de moi</h2>
     </div>
 
     <div class="about-content">
 
-      <div class="about-image">
-
-        <img src="Design sans titre (3).png"
-          alt="Photo profil">
-
-      </div>
+    
 
       <div class="about-text">
 
@@ -208,6 +228,65 @@
     </div>
 
   </section>
+
+  <!-- PARCOURS -->
+
+<section class="timeline hidden"
+id="timeline">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Mon Parcours</h2>
+
+    </div>
+
+    <div class="timeline-content">
+
+      <div class="timeline-item">
+
+        <span>2025 </span>
+
+        <h3>
+          Formation Développement Web Frontend
+        </h3>
+
+        <p>
+          Force-N / MasterCard
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <span>2026</span>
+
+        <h3>
+          Certification SAS Woman in Tech
+        </h3>
+
+        <p>
+          Simplon Sénégal
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <span>2022 - 2025</span>
+
+        <h3>
+          Licence Informatique — Génie Logiciel
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- SERVICES -->
 
@@ -293,14 +372,51 @@
         <p>JavaScript</p>
       </div>
 
+
       <div class="tech-item">
-        <i class="fa-brands fa-react"></i>
-        <p>React.js</p>
+        <i class="fa-solid fa-code-branch"></i>
+        <p>Node.Js</p>
       </div>
 
       <div class="tech-item">
+        <i class="fa-solid fa-database"></i>
+        <p>SQL</p>
+        </div>
+
+        <div class="tech-item">
+          <i class="fa-solid fa-code-branch"></i>
+          <p>Python/ PyQt5</p>
+
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-solid fa-cubes"></i>
+        <p>Angular/Laravel</p>
+      </div>
+      
+      <div class="tech-item">
+        <i class="fa-solid fa-cubes"></i>
+        <p>PyQt5</p>
+        </div>
+
+        <div class="tech-item">
+          <i class="fa-solid fa-cubes"></i>
+          <p>Figma</p>
+      </div>
+
+          <div class="tech-item">
+            <i class="fa-solid fa-cubes"></i>
+            <p>VS Code</p>
+        </div>
+
+            <div class="tech-item">
+              <i class="fa-solid fa-cubes"></i>
+              <p>Postman</p>
+          </div>
+
+      <div class="tech-item">
         <i class="fa-brands fa-github"></i>
-        <p>GitHub</p>
+        <p>MySQL/GitHub</p>
       </div>
 
     </div>
@@ -324,8 +440,12 @@
 
       <article class="project-card">
 
-        <img src="Bienvenue.png"
-          alt="Projet SSO">
+        <div class="project-gallery" aria-label="Galerie du projet Plateforme Multi / SSO">
+          <img src="Bienvenue.png" class="project-gallery-img" alt="Plateforme Multi / SSO - Vue 1">
+          <img src="tableuabord.png" class="project-gallery-img" alt="Plateforme Multi / SSO - Vue 2">
+          <img src="planDacces.png" class="project-gallery-img" alt="Plateforme Multi / SSO - Vue 3">
+        </div>
+
 
         <div class="project-content">
 
@@ -352,8 +472,12 @@
 
       <article class="project-card">
 
-        <img src="LogBFEEM.png"
-          alt="Projet BFEM">
+        <div class="project-gallery" aria-label="Galerie du projet Gestion des candidats BFEM">
+          <img src="LogBFEEM.png" class="project-gallery-img" alt="Gestion des candidats BFEM - Vue 1">
+          <img src="gestionnotes.png" class="project-gallery-img" alt="Gestion des candidats BFEM - Vue 2">
+          <img src="ajoumodifie.png" class="project-gallery-img" alt="Gestion des candidats BFEM - Vue 3">
+        </div>
+
 
         <div class="project-content">
 
@@ -379,8 +503,12 @@
 
       <article class="project-card">
 
-        <img src="Election.png"
-          alt="Projet Election">
+        <div class="project-gallery" aria-label="Galerie du projet Application Élection Présidentielle">
+          <img src="Election.png" class="project-gallery-img" alt="Élection Présidentielle - Vue 1">
+          <img src="parrainage.png" class="project-gallery-img" alt="Élection Présidentielle - Vue 2">
+          <img src="déliberation.png" class="project-gallery-img" alt="Élection Présidentielle - Vue 3">
+        </div>
+
 
         <div class="project-content">
 
@@ -403,6 +531,24 @@
       </article>
 
     </div>
+
+    <div class="project-buttons">
+
+  <a href="#"
+  class="btn primary-btn">
+
+    Voir le projet
+
+  </a>
+
+  <a href="https://github.com/Hawa02Diagne"
+  class="btn secondary-btn">
+
+    GitHub
+
+  </a>
+
+</div>
 
   </section>
 
@@ -492,13 +638,13 @@
 
           <form action="https://formsubmit.co/diagnehawa603@gmail.com" method="POST">
 
-            <input type="text"
+            <input type="text" name="name"
               placeholder="Nom complet">
 
-            <input type="email"
+            <input type="email" name="email"
               placeholder="Adresse email">
 
-            <textarea rows="6"
+            <textarea rows="6" name="message"
               placeholder="Votre message"></textarea>
 
               <input type="hidden" name="_captcha" value="false">
@@ -545,7 +691,7 @@
 
       </a>
 
-      <a href="https://linkedin.com/in/hawa-diagne"
+      <a href="https://linkedin.com/in/hawa-diagne-25739a37"
       target="_blank">
 
         <i class="fa-brands fa-linkedin"></i>
@@ -575,6 +721,15 @@
   <!-- JS -->
 
   <script src="script.js"></script>
+  <script
+src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration:1000,
+    once:true
+  });
+</script>
 
 </body>
 
