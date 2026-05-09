@@ -1,10 +1,7 @@
 // MENU MOBILE
 
-const hamburger =
-document.querySelector(".hamburger");
-
-const navLinks =
-document.querySelector(".nav-links");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
 hamburger.addEventListener("click", () => {
 
@@ -12,18 +9,11 @@ hamburger.addEventListener("click", () => {
 
 });
 
-// COPYRIGHT AUTO
+// ANIMATION AU SCROLL
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+const hiddenElements = document.querySelectorAll(".hidden");
 
-// ANIMATION SCROLL
-
-const hiddenElements =
-document.querySelectorAll(".hidden");
-
-const observer =
-new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
 
   entries.forEach((entry) => {
 
@@ -37,10 +27,16 @@ new IntersectionObserver((entries) => {
 
 });
 
-hiddenElements.forEach((el) =>
-observer.observe(el));
+hiddenElements.forEach((el) => observer.observe(el));
 
-// BOUTON RETOUR HAUT
+
+// COPYRIGHT AUTOMATIQUE
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+// BOUTON RETOUR EN HAUT
 
 const scrollBtn =
 document.getElementById("scrollTopBtn");
@@ -70,24 +66,22 @@ scrollBtn.addEventListener("click", () => {
 
 });
 
-// ==========================
-// BOUTON J'AIME
-// ==========================
 
-let likes = 0;
+// LIKE
+
+let likeCount = 0;
 
 function likePortfolio(){
 
-  likes++;
+  likeCount++;
 
   document.getElementById("likeCount")
-  .innerText = likes;
+  .textContent = likeCount;
 
 }
 
-// ==========================
+
 // COMMENTAIRES
-// ==========================
 
 function addComment(){
 
@@ -102,6 +96,7 @@ function addComment(){
     alert("Veuillez remplir tous les champs");
 
     return;
+
   }
 
   const commentBox =
@@ -120,10 +115,7 @@ function addComment(){
   document.getElementById("commentsList")
   .appendChild(commentBox);
 
-  // Réinitialiser
-
   document.getElementById("username").value = "";
-
   document.getElementById("commentInput").value = "";
 
 }
