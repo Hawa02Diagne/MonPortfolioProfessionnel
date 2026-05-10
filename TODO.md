@@ -1,8 +1,10 @@
 # TODO
-- [x] Analyser le layout de la section Accueil (hero) : photo + réseaux dans `.hero-right`.
-- [x] Modifier `style.css` pour rapprocher la photo et les réseaux du centre : changer `justify-content` et ajuster `gap`/décalage.
 
-- [x] Sécuriser la section commentaires contre le XSS (remplacement de innerHTML).
-- [ ] Tester le rendu (desktop + responsive) et corriger si besoin.
+- [ ] Corriger le “contenu trop collé au bord” dans la section Accueil (hero)
+  - [ ] Ajouter un padding horizontal à `.hero` pour desktop
+  - [ ] Ajuster le padding/marges de `.hero-text` si nécessaire
+  - [ ] Ajuster `gap`/marges de `.hero-right` pour que la photo et les réseaux sociaux soient bien espacés
+  - [ ] Ajouter des ajustements dans le bloc `@media(max-width:768px)` pour éviter le collage au bord sur mobile
+- [x] Recharger la page et vérifier : texte + photo + réseaux sociaux
 
 

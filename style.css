@@ -10,7 +10,7 @@ html{
 
 body{
   font-family:'Open Sans',sans-serif;
-  background:#7e8999;
+  background :whitesmoke;
   color:#333;
   line-height:1.7;
 }
@@ -87,6 +87,8 @@ h1,h2,h3{
   align-items:center;
   gap:70px;
   padding-top:120px;
+  padding-left:5vw;
+  padding-right:5vw;
   background:
   linear-gradient(
   135deg,
@@ -94,6 +96,7 @@ h1,h2,h3{
   #dbeafe
   );
 }
+
 
 
 
@@ -630,7 +633,10 @@ section{
   .hero{
     flex-direction:column;
     text-align:center;
+    padding-left:4vw;
+    padding-right:4vw;
   }
+
 
   .about-content{
     flex-direction:column;
