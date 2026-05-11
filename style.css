@@ -166,12 +166,13 @@ h1,h2,h3{
   display:flex;
   flex-direction:column;
   align-items:center;
+  margin-top:-45px;
 }
 
 
 
 .hero-image img{
-  width:100px;
+  width:200px;
   aspect-ratio: 1 / 1;
   border-radius:50%;
   overflow:hidden;

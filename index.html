@@ -534,8 +534,9 @@ id="timeline">
 
     <div class="project-buttons">
 
-  <a href="#"
-  class="btn primary-btn">
+  <a href="#projects"
+  class="btn primary-btn"> 
+
 
     Voir le projet
 
@@ -636,30 +637,22 @@ id="timeline">
 
         <div class="contact-form">
 
-          <form action="https://formsubmit.co/diagnehawa603@gmail.com" method="POST">
+<form id="contact-form" action="" method="GET" novalidate>
 
-            <input type="text" name="name"
-              placeholder="Nom complet">
+            <input type="text" id="nom" name="nom" placeholder="Nom complet" required>
 
-            <input type="email" name="email"
-              placeholder="Adresse email">
+            <input type="email" id="email" name="email" placeholder="Adresse email" required>
 
-            <textarea rows="6" name="message"
-              placeholder="Votre message"></textarea>
+            <textarea id="message" rows="6" name="message" placeholder="Votre message" required></textarea>
 
-              <input type="hidden" name="_captcha" value="false">
+            <p id="form-status"></p>
 
-              <input type="hidden" name="next" value="https://hawa02diagne.github.io/MonPortfolioProfessionnel/merci.html">
-
-            <button
-              type="submit"
-              class="btn primary-btn">
-
+            <button type="submit" class="btn primary-btn">
               Envoyer
-
             </button>
 
           </form>
+
 
         </div>
 
@@ -719,10 +712,12 @@ id="timeline">
   </button>
 
   <!-- JS -->
-
   <script src="script.js"></script>
+<script type="module" src="formulaire-contact.js"></script>
+
   <script
 src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 <script>
   AOS.init({
