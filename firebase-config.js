@@ -1,6 +1,13 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+// firebase-config.js
+// IMPORTANT: ce site est servi en statique (sans bundler). On charge donc Firebase uniquement via CDN.
+
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+
+import {
+  getFirestore
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,4 +24,5 @@ const app = initializeApp(firebaseConfig);
 
 // Firestore instance (used by formulaire-contact.js)
 export const db = getFirestore(app);
+
 

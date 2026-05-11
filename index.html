@@ -553,77 +553,12 @@ id="timeline">
 
   </section>
 
-  <!-- COMMENTAIRES -->
-
-  <section class="comments-section">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Avis & Commentaires</h2>
-
-      </div>
-
-      <!-- LIKE -->
-
-      <div class="like-box">
-
-        <button
-          class="like-btn"
-          onclick="likePortfolio()">
-
-          ❤️ J’aime
-
-        </button>
-
-        <p>
-
-          <span id="likeCount">0</span>
-          personnes aiment ce portfolio
-
-        </p>
-
-      </div>
-
-      <!-- FORM -->
-
-      <div class="comment-form">
-
-        <input type="text"
-          id="username"
-          placeholder="Votre nom">
-
-        <textarea
-          id="commentInput"
-          rows="5"
-          placeholder="Votre commentaire..."></textarea>
-
-        <button
-          onclick="addComment()"
-          class="btn primary-btn">
-
-          Publier
-
-        </button>
-
-      </div>
-
-      <!-- LISTE -->
-
-      <div id="commentsList"
-        class="comments-list">
-
-      </div>
-
-    </div>
-
-  </section>
-
+  
   <!-- CONTACT -->
 
   <section class="contact hidden"
     id="contact">
+
 
     <div class="container">
 
@@ -662,7 +597,44 @@ id="timeline">
 
   </section>
 
+  <section id="commentaires">
+    <h2>Laisse-moi un mot</h2>
+ 
+    <form id="commentaire-form">
+        <input type="text" id="auteur" placeholder="Ton nom" required>
+        <textarea id="texte" placeholder="Ton message..." required>
+        </textarea>
+        <button type="submit">Publier</button>
+    </form>
+ 
+    <div id="commentaires-liste">
+        <!-- Les commentaires seront chargés dynamiquement ici -->
+    </div>
+</section>
+ 
+
+  <!-- TABLEAU DE BORD (messages Firestore) -->
+  <section class="dashboard hidden" id="dashboard">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tableau des données</h2>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="dashboard-header">
+          <h3>Derniers messages</h3>
+          <p class="dashboard-subtitle">Affichés en temps réel depuis Firestore</p>
+        </div>
+
+        <div id="messagesList" class="messages-list"></div>
+
+        <p id="messagesStatus" class="messages-status"></p>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
+
 
   <footer class="footer">
 
@@ -725,6 +697,12 @@ src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     once:true
   });
 </script>
+
+
+<!-- À placer juste avant </body> -->
+<script type="module" src="commentaires.js"></script>
+
+
 
 </body>
 
