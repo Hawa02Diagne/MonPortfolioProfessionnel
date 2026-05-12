@@ -50,7 +50,7 @@ h1,h2,h3{
 }
 
 .logo-img{
-  height:50px;
+  height: 70px;
   width:auto;
   display:block;
 }
@@ -243,7 +243,7 @@ section{
 }
 
 .about-image img{
-  width:800px;
+  width:  900px;
   max-width:100%;
   border-radius:20px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
