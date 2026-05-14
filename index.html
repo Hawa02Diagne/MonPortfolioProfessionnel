@@ -29,8 +29,11 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
 
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-dashboard.css">
+
 
   <link rel="icon"
 href="favicon.png">
@@ -677,11 +680,12 @@ id="timeline">
 
   <!-- BOUTON HAUT -->
 
-  <button id="scrollTopBtn">
+  <button id="scrollTopBtn" aria-label="Retour en haut de page" title="Retour en haut">
 
-    <i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 
   </button>
+
 
   <!-- JS -->
   <script src="script.js"></script>
@@ -699,9 +703,11 @@ src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </script>
 
 
+<!-- Dashboard (messages Firestore) -->
+<script type="module" src="dashboard.js"></script>
+
 <!-- À placer juste avant </body> -->
 <script type="module" src="commentaires.js"></script>
-
 
 
 </body>

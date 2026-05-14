@@ -27,26 +27,24 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
 
-  if(window.scrollY > 300){
-    scrollBtn.style.display = "block";
-  }
-
-  else{
-    scrollBtn.style.display = "none";
-  }
-
-});
-
-scrollBtn.addEventListener("click", () => {
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
+if (scrollBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
   });
 
-});
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
 
 /* PROJECTS: clic sur la card => photo suivante */
 
@@ -84,21 +82,21 @@ projectCards.forEach((card) => {
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
-/* LIKE */
+/* LIKE (optionnel) */
 
-let likes = localStorage.getItem("likes") || 0;
+const likeCountEl = document.getElementById("likeCount");
 
-document.getElementById("likeCount").textContent = likes;
+if (likeCountEl) {
+  let likes = localStorage.getItem("likes") || 0;
+  likeCountEl.textContent = likes;
 
-function likePortfolio(){
-
-  likes++;
-
-  localStorage.setItem("likes", likes);
-
-  document.getElementById("likeCount").textContent = likes;
-
+  window.likePortfolio = function likePortfolio() {
+    likes++;
+    localStorage.setItem("likes", likes);
+    likeCountEl.textContent = likes;
+  };
 }
+
 
 /* COMMENTAIRES */
 
