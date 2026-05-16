@@ -1,21 +1,17 @@
-# TODO — MonPortfolioProfessionnel
+# TODO - Harmonisation couleurs & typographies
 
-- [ ] Corriger l’envoi Firestore du formulaire contact (HTTP 405)
-  - [x] Diagnostic : 405 observé côté navigation/submit
-  - [x] Changement formulaire dans `index.html` (method POST -> GET, action -> "")
-  - [x] Renforcement anti-submit dans `formulaire-contact.js` (preventDefault + stopImmediatePropagation sur submit + click)
-  - [ ] Vérifier que `formulaire-contact.js` se charge (logs console)
-  - [ ] Tester : formulaire → aucun reload + message “Envoi en cours…” puis succès/erreur Firestore
+## Étape 1
+- [ ] Refactoriser `style.css` : ajouter des variables CSS (:root) et utiliser un système de couleurs (primary/accent/bg/text/muted).
 
-- [ ] Afficher les messages envoyés depuis Firebase dans le tableau de bord
-  - [ ] Ajouter un conteneur HTML (section/tableau) pour la liste des messages
-  - [ ] Dans `formulaire-contact.js`, lire Firestore collection `messages` et afficher (top 20) trié par `date` desc
-  - [ ] Utiliser `onSnapshot` pour afficher en temps réel
+## Étape 2
+- [ ] Harmoniser la typographie : line-height global + réglage `h1/h2/h3` pour meilleure lisibilité.
 
-- [x] Ajouter un script dédié dashboard (onSnapshot) sans toucher formulaires contact/commentaires
-- [x] Brancher `dashboard.js` dans `index.html`
-- [ ] Sécuriser `script.js` contre les erreurs si `likeCount` n’existe pas
-- [ ] Micro-améliorations accessibilité (focus visible / aria sur bouton scroll)
-- [ ] Tester manuellement : soumission contact → apparition tableau de bord (top 20)
+## Étape 3
+- [ ] Aligner les composants : boutons/hover, timeline, badges, tags pour uniformité visuelle.
 
+## Étape 4
+- [ ] Mettre à jour `style-dashboard.css` pour qu’il utilise les mêmes variables.
+
+## Étape 5
+- [ ] Vérifier rapidement le rendu dans le navigateur (index + section dashboard).
 

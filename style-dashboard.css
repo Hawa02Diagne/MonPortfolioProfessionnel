@@ -1,10 +1,10 @@
-/* Styles dédiés au dashboard (sans impacter contact/commentaires) */
+/* Styles dédiés au dashboard (alignés avec le design system du portfolio) */
 
 .dashboard-card{
-  background: #fff;
-  border-radius: 15px;
+  background: var(--card);
+  border-radius: var(--radius-md);
   padding: 24px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .messages-list{
@@ -23,31 +23,33 @@
 
 .dashboard-message h4{
   margin: 0 0 8px 0;
-  color: #1E3A8A;
+  color: var(--primary);
   font-size: 1.05rem;
 }
 
 .dashboard-meta{
   margin: 0 0 10px 0;
-  color: #334155;
+  color: var(--muted-2);
   font-size: 0.95rem;
 }
 
 .dashboard-body{
   margin: 0;
-  color: #444;
+  color: var(--text);
   line-height: 1.6;
   white-space: pre-wrap;
 }
 
 .dashboard-date{
   margin: 10px 0 0 0;
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
 .dashboard-subtitle{
-  color: #64748b;
+  color: var(--muted);
   margin-top: 6px;
 }
+
+
 
